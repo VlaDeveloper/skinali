@@ -1,0 +1,75 @@
+.navbar
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: #fff
+	&-wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		min-height: 80px
+	&__mobile,
+	&__landline
+		text-align: right
+	&__phone
+		display: block
+		font-size: 19px
+		+bold
+		text-decoration: none
+		color: $text-color
+		margin-bottom: 5px
+	&__small-text
+		font-size: 14px
+		color: $text-color-light
+		text-decoration: none
+.menu
+	position: fixed
+	z-index: -1
+	transition: .2s
+	transform: translateY(-100%)
+	&_active
+		transform: translateY(0)
+	&__nav
+		display: flex
+		align-items: center
+		justify-content: space-around
+	left: 0
+	top: 80px
+	padding: 16px 0
+	background-color: $primary
+	width: 100%
+	&__link
+		font-size: 17px
+		text-transform: uppercase
+		color: #fff
+		text-decoration: none
+	&-button
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background-color: transparent
+		border: none
+		border:
+			right: 1px solid rgba(#510bba, 0.1)
+			left: 1px solid rgba(#510bba, 0.1)
+		height: 80px
+		width: 80px
+		&__line
+			display: block
+			width: 20px
+			height: 3px
+			background-color: #89a9eb
+			margin: 2px 0
+
+.logo
+	&__text
+		font-size: 18px
+		text-transform: uppercase
+		display: block
+		+bold
+		margin-bottom: 5px
+	&__description
+		color: $text-color-light
+		display: block
