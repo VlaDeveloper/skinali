@@ -25,9 +25,9 @@
 		text-decoration: none
 .menu
 	position: fixed
-	z-index: -1
+	z-index: 0
 	transition: .2s
-	transform: translateY(-100%)
+	transform: translateY(-200%)
 	&_active
 		transform: translateY(0)
 	&__nav
@@ -73,3 +73,24 @@
 	&__description
 		color: $text-color-light
 		display: block
+
+@media (max-width: 991px)
+	.navbar
+		&__mobile,
+		&__landline
+			display: none
+
+@media (max-width: 576px)
+	.logo
+		display: none
+	.menu
+		top: 60px
+		&-button
+			height: 60px
+		&__nav
+			flex-direction: column
+		&__link
+			margin-bottom: 20px
+	.navbar
+		&-wrap
+			min-height: 60px
