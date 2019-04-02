@@ -10,6 +10,19 @@ body
 	padding: 17px 22px
 	color: $primary
 	+bold
+	&:hover
+		cursor: pointer
+
+.button
+	text-transform: uppercase
+	padding: 25px 45px
+	background-color: $primary
+	border: none
+	color: #fff
+	+bold
+	font-size: 15px
+	&:hover
+		cursor: pointer
 
 .bg-secondary
 	background-color: $bg-secondary
@@ -21,24 +34,31 @@ body
 
 .checkbox
 	display: none
+	&:checked + label
+		&::before
+			background-color: $primary
 	&-label
 		display: flex
 		align-items: center
+		margin-right: 40px
+		&:hover
+			cursor: pointer
 		&::before
 			content: ''
 			width: 30px
 			height: 30px
 			border: 1px solid #dddddd
+			margin-right: 20px
 
 @media (max-width: 576px)
 	.button-o
 		font-size: 10px
+		
+	.checkbox
+		&-label
+			margin-right: 20px
+			&::before
+				width: 20px
+				height: 20px
+				margin-right: 10px
 
-.button
-	text-transform: uppercase
-	padding: 25px 45px
-	background-color: $primary
-	border: none
-	color: #fff
-	+bold
-	font-size: 15px
