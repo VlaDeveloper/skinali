@@ -2,7 +2,11 @@ body
 	+light
 	color: $text-color
 
+img
+	max-width: 100%
+
 .button-o
+	text-decoration: none
 	text-transform: uppercase
 	border: 2px solid $primary
 	background-color: transparent
@@ -14,6 +18,7 @@ body
 		cursor: pointer
 
 .button
+	text-decoration: none
 	text-transform: uppercase
 	padding: 25px 45px
 	background-color: $primary
@@ -23,6 +28,19 @@ body
 	font-size: 15px
 	&:hover
 		cursor: pointer
+	&-fitting
+		color: $primary
+		background-color: #fff
+	&-add
+		background-color: lighten($primary, 10)
+		color: #fff
+	&-like
+		background-color: $primary
+		border: none
+		height: 30px
+		width: 30px
+
+
 
 .section
 	padding: 100px 0
