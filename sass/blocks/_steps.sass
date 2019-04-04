@@ -1,0 +1,39 @@
+.step
+	text-align: center
+	position: relative
+	&__text
+		max-width: 160px
+		margin: auto
+		margin-bottom: 30px
+	&__title
+		font-size: 18px
+		+bold
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		top: 25%
+		right: -63%
+		display: block
+		background-color: $text-color-light
+		opacity: 0.8
+	&:last-child
+		&::before
+			display: none
+	&s
+		background-color: $bg-light
+		&-block
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+@media (max-width: 991px)
+	.step
+		flex-basis: 33.33%
+		&::before
+			display: none
+
+@media (max-width: 768px)
+	.step
+		flex-basis: 100%
