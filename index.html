@@ -447,26 +447,37 @@
 					До и после
 				</h2>
 				<!-- /.section-title section__title -->
-				<div class="before-slider">
-					<div class="before-slider__item">
-						<div class="before-after">
-							<img src="img/before-slider/sample-before.png" alt="">
-							<img src="img/before-slider/sample-after.png" alt="">
+				<div class="before-slider-wrap">
+					<div class="before-slider">
+						<div class="before-slider__item">
+							<div class="before-after">
+								<img src="img/before-slider/sample-before.png" alt="">
+								<img src="img/before-slider/sample-after.png" alt="">
+							</div>
+						</div>
+						<div class="before-slider__item">
+							<div class="before-after">
+								<img src="img/before-slider/sample-before.png" alt="">
+								<img src="img/before-slider/sample-after.png" alt="">
+							</div>
+						</div>
+						<div class="before-slider__item">
+							<div class="before-after">
+								<img src="img/before-slider/sample-before.png" alt="">
+								<img src="img/before-slider/sample-after.png" alt="">
+							</div>
 						</div>
 					</div>
-					<div class="before-slider__item">
-						<div class="before-after">
-							<img src="img/before-slider/sample-before.png" alt="">
-							<img src="img/before-slider/sample-after.png" alt="">
-						</div>
-					</div>
-					<div class="before-slider__item">
-						<div class="before-after">
-							<img src="img/before-slider/sample-before.png" alt="">
-							<img src="img/before-slider/sample-after.png" alt="">
-						</div>
+					<div class="before-slider-arrows">
+						<button class="arrow arrow-left">
+							<img src="img/before-slider/left.png" alt="">
+						</button>
+						<button class="arrow arrow-right">
+							<img src="img/before-slider/right.png" alt="">
+						</button>
 					</div>
 				</div>
+				<!-- /.before-slider-wrap -->
 			</div>
 			<!-- /.container -->
 		</section>
@@ -649,9 +660,13 @@
 			$(".before-after").twentytwenty({
 				before_label: 'Без скинали', // Set a custom before label
     		after_label: 'С скинали' // Set a custom after label
-  });
+    	});
 			$('.before-slider').slick({
-				dragable: false
+				draggable: false,
+				dots: true,
+				prevArrow: $('.arrow-left'),
+				nextArrow: $('.arrow-right'),
+				dotsClass: 'before-slider__dots'
 			});
 		});
 	</script>

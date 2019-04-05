@@ -1,4 +1,36 @@
 .before
 	&-slider
-		max-width: 640px
-		margin: auto
+		&-wrap
+			max-width: 640px
+			margin: auto
+			position: relative
+		&-arrows
+			position: absolute
+			top: 50%
+			transform: translateY(-100%)
+			width: 100%
+			display: flex
+			justify-content: space-between
+		&__dots
+			list-style-type: none
+			margin: auto
+			text-align: center
+			li
+				width: 10px
+				height: 10px
+				background-color: #d1d1d1
+				border-radius: 10em
+				display: inline-block
+				margin: 50px 8px 0
+			button
+				display: none
+
+.arrow
+	background-color: transparent
+	border: none
+	&:focus
+		outline: none
+	&-left
+		transform: translateX(-200%)
+	&-right
+		transform: translateX(200%)
