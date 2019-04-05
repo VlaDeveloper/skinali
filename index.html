@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Фабрика скинали</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/twentytwenty.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -440,6 +441,36 @@
 			<!-- /.container -->
 		</section>
 		<!-- /.section steps -->
+		<section class="section before">
+			<div class="container">
+				<h2 class="section-title section__title">
+					До и после
+				</h2>
+				<!-- /.section-title section__title -->
+				<div class="before-slider">
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/before-slider/sample-before.png" alt="">
+							<img src="img/before-slider/sample-after.png" alt="">
+						</div>
+					</div>
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/before-slider/sample-before.png" alt="">
+							<img src="img/before-slider/sample-after.png" alt="">
+						</div>
+					</div>
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/before-slider/sample-before.png" alt="">
+							<img src="img/before-slider/sample-after.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.section before -->
 		<section class="section reviews">
 			<div class="container">
 				<h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -606,5 +637,23 @@
 	<!-- /.footer -->
 	<!-- Подключение виджета обратной связи -->
 	<script type="text/javascript" src="https://spikmi.com/Widget?Id=583"></script>
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script>
+		$(window).load(function() {
+			$(".before-after").twentytwenty({
+				before_label: 'Без скинали', // Set a custom before label
+    		after_label: 'С скинали' // Set a custom after label
+  });
+			$('.before-slider').slick({
+				dragable: false
+			});
+		});
+	</script>
 </body>
 </html>
