@@ -15,7 +15,7 @@
 				<div class="menu-wrap">
 					<nav class="menu__nav">
 						<a href="#" class="menu__link">Главная</a>
-						<a href="#" class="menu__link">Продукция</a>
+						<a href="#features" class="menu__link">Преимущества</a>
 						<a href="#" class="menu__link">Каталог</a>
 						<a href="#" class="menu__link">Примеры работ</a>
 						<a href="#" class="menu__link">Примерка изображений</a>
@@ -48,7 +48,7 @@
 						<a class="navbar__phone" href="tel:+79121234567">+7 499 123-45-67</a>
 						<a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
 					</div>
-					<button class="button-o navbar__button">Получить консультацию</button>
+					<a href="#offer" class="button-o navbar__button">Получить консультацию</a>
 				</div>
 				<!-- /.navbar-wrap -->
 			</div>
@@ -59,7 +59,7 @@
 			<div class="container">
 				<h1 class="hero__title">Гарантия <br> минимальной цены <br> на скинали</h1>
 				<span class="hero__subtitle">от 3 000 р/м2</span>
-				<button class="hero__button button">Заказать скинали</button>
+				<a href="#offer" class="hero__button button">Заказать скинали</a>
 			</div>
 			<!-- /.container -->
 		</div>
@@ -67,7 +67,7 @@
 	</header>
 	<!-- /.header -->
 	<main>
-		<section class="offer bg-secondary">
+		<section class="offer bg-secondary" id="offer">
 			<div class="container">
 				<div class="offer__block offer-block offer-block_calc-bg">
 					<h2 class="offer__title">
@@ -80,17 +80,24 @@
 						<div class="form__row">
 							<div class="form__group">
 								<label for="" class="form__label">Вид стекла</label>
-								<input type="text" class="form__input input">
+								<input type="hidden" name="type" id="select-type" value="С печатью">
+								<div class="select form__select">
+									<div class="select_checked">С печатью</div>
+									<ul class="select__dropdown">
+										<li class="select__option" data-value="С печатью">С печатью</li>
+										<li class="select__option" data-value="Без печати">Без печати</li>
+									</ul>
+								</div>
 							</div>
 							<!-- /.form__group -->
 							<div class="form__group">
 								<label for="" class="form__label">Ширина, см</label>
-								<input type="text" class="form__input input">
+								<input type="number" class="form__input input">
 							</div>
 							<!-- /.form__group -->
 							<div class="form__group">
 								<label for="" class="form__label">Высота, см</label>
-								<input type="text" class="form__input input">
+								<input type="number" class="form__input input">
 							</div>
 							<!-- /.form__group -->
 						</div>
@@ -125,7 +132,7 @@
 			</div>
 			<!-- /.container -->
 		</section>
-		<section class="section features">
+		<section class="section features" id="features">
 			<div class="container">
 				<h2 class="section-title section__title">Наши преимущества</h2>
 				<div class="feature-block">
@@ -530,7 +537,7 @@
 							</div>
 							<!-- /.form__group -->
 							<div class="form__group">
-								<input type="text" class="form__input input" placeholder="Ваш телефон">
+								<input type="tel" class="form__input input" placeholder="Ваш телефон">
 							</div>
 							<!-- /.form__group -->
 							<div class="form__group">
@@ -655,20 +662,7 @@
 	<script src="js/jquery.event.move.js"></script>
 	<script src="js/jquery.twentytwenty.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script>
-		$(window).load(function() {
-			$(".before-after").twentytwenty({
-				before_label: 'Без скинали', // Set a custom before label
-    		after_label: 'С скинали' // Set a custom after label
-    	});
-			$('.before-slider').slick({
-				draggable: false,
-				dots: true,
-				prevArrow: $('.arrow-left'),
-				nextArrow: $('.arrow-right'),
-				dotsClass: 'before-slider__dots'
-			});
-		});
-	</script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
