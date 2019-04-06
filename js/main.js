@@ -29,5 +29,8 @@
 				nextArrow: $('.arrow-right'),
 				dotsClass: 'before-slider__dots'
 			});
+			if($(window).width() < 768){
+				$('.reviews-slider').slick();
+			}
 			$('input[type="tel"]').mask("+7 (999) 999-99-99");
 		});
